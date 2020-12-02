@@ -1,8 +1,8 @@
 // https://adventofcode.com/2020/day/1
 
-import * as fs from 'fs';
+import * as fs from "fs";
 
-const dataBuffer = fs.readFileSync('1.txt');
+const dataBuffer = fs.readFileSync("1.txt");
 const dataString = dataBuffer.toString();
 const dataLines = dataString.split(/\r?\n/);
 
@@ -22,7 +22,10 @@ const getTwoAnswer = (nums, target) => {
 
 const getThreeAnswer = (nums, target) => {
   for (let i = 0; i < nums.length; i++) {
-    const twoSumAnswer = getTwoAnswer(nums.slice(i + 1, nums.length), target - nums[i]);
+    const twoSumAnswer = getTwoAnswer(
+      nums.slice(i + 1, nums.length),
+      target - nums[i]
+    );
 
     if (twoSumAnswer == null) {
       continue;
